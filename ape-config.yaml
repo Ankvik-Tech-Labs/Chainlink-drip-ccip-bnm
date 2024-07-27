@@ -1,0 +1,30 @@
+name: drip_ccip_bnm
+plugins:
+  - name: solidity
+  - name: alchemy
+  - name: foundry
+default_ecosystem: ethereum
+ethereum:
+  default_network: mainnet-fork
+  sepolia:
+    default_provider: alchemy
+  mainnet_fork:
+    default_provider: foundry
+    default_transaction_type: 0
+    transaction_acceptance_timeout: 600 # 5 minutes
+foundry:
+  fork:
+    ethereum:
+      mainnet_fork:
+        upstream_provider: alchemy
+
+# * Example usage of dependencies & remappings
+# ? More configuration examples: https://github.com/Aviksaikat/Ape-Usage/blob/main/network-configs.md
+# dependencies:
+#   - name: OpenZeppelin
+#     github: OpenZeppelin/openzeppelin-contracts
+#     version: 3.2.0
+  
+# solidity:
+#   import_remapping:
+#     - "openzeppelin-contracts-06=OpenZeppelin/3.2.0"

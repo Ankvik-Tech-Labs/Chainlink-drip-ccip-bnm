@@ -1,0 +1,32 @@
+{
+  "template": "https://github.com/Aviksaikat/Cookiecutter-ape-hatch-template",
+  "commit": "27bb02e8a06ea2fd1237d48e652c5a2153980525",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Saikat K",
+      "email": "github.maturity983@passinbox.com",
+      "github_username": "Aviksaikat",
+      "project_name": "Chainlink-drip-ccip-bnm",
+      "dist_name": "Chainlink-drip-ccip-bnm",
+      "package_name": "drip_ccip_bnm",
+      "project_short_description": "A repo to call the drip method of CCIP-BnM contract to mint CCIP-BnM tokens for testing on different test chains",
+      "repository_name": "Ankvik-Tech-LabsChainlink-drip-ccip-bnm",
+      "repository_url": "https://github.com/Ankvik-Tech-Labs/Chainlink-drip-ccip-bnm",
+      "docs_url": "https://Ankvik-Tech-Labs.github.io/Chainlink-drip-ccip-bnm/",
+      "open_source_license": "MIT license",
+      "python_version": "3.9",
+      "smart_contract_language": "solidity",
+      "web3_provider": "alchemy",
+      "local_blockchain_node": "foundry",
+      "fork_network": "mainnet-fork",
+      "chain": "ethereum",
+      "mkdocs": "N",
+      "docs_icon": "material/library",
+      "docs_color_primary": "lime",
+      "docs_color_accent": "red",
+      "_template": "https://github.com/Aviksaikat/Cookiecutter-ape-hatch-template"
+    }
+  },
+  "directory": null
+}
