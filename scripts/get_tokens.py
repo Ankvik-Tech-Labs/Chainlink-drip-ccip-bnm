@@ -31,7 +31,7 @@ def main():
     ]
     for ntwrk in networks_list:
         with networks.parse_network_choice(ntwrk, disconnect_after=True) as provider:
-            console.print(provider)
+            # console.print(provider)
             try:
                 # you can add a for loop to drip any number of tokens you want
                 drip()
