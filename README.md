@@ -10,11 +10,13 @@
 - arbitrum
 - avalanche
 - base
-- blast
-- bsc
 ```
 
 ## Usage
+
+1. Import or generate new accounts in ape.
+
+2. Run
 
 ```sh
 # for eth sepolia

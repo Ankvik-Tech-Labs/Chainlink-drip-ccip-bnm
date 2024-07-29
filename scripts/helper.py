@@ -1,4 +1,5 @@
-from enum import Enum, auto
+from enum import Enum
+
 
 class SupportedNetworks(Enum):
     ETHEREUM_SEPOLIA = 0
@@ -13,9 +14,11 @@ class SupportedNetworks(Enum):
     GNOSIS_CHIADO = 9
     CELO_ALFAJORES = 10
 
+
 class PayFeesIn(Enum):
     Native = 1
     LINK = 2
+
 
 class Helper:
     def __init__(self):
@@ -30,7 +33,7 @@ class Helper:
             SupportedNetworks.WEMIX_TESTNET: "Wemix Testnet",
             SupportedNetworks.KROMA_SEPOLIA: "Kroma Sepolia",
             SupportedNetworks.GNOSIS_CHIADO: "Gnosis Chiado",
-            SupportedNetworks.CELO_ALFAJORES: "Celo Alfajores"
+            SupportedNetworks.CELO_ALFAJORES: "Celo Alfajores",
         }
 
         # * reverse a dict
@@ -64,7 +67,7 @@ class Helper:
             SupportedNetworks.WEMIX_TESTNET: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
             SupportedNetworks.KROMA_SEPOLIA: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
             SupportedNetworks.GNOSIS_CHIADO: "0x19b1bac554111517831ACadc0FD119D23Bb14391",
-            SupportedNetworks.CELO_ALFAJORES: "0xb00E95b773528E2Ea724DB06B75113F239D15Dca"
+            SupportedNetworks.CELO_ALFAJORES: "0xb00E95b773528E2Ea724DB06B75113F239D15Dca",
         }
 
         # Link addresses
@@ -79,7 +82,7 @@ class Helper:
             SupportedNetworks.WEMIX_TESTNET: "0x3580c7A817cCD41f7e02143BFa411D4EeAE78093",
             SupportedNetworks.KROMA_SEPOLIA: "0xa75cCA5b404ec6F4BB6EC4853D177FE7057085c8",
             SupportedNetworks.GNOSIS_CHIADO: "0xDCA67FD8324990792C0bfaE95903B8A64097754F",
-            SupportedNetworks.CELO_ALFAJORES: "0x32E08557B14FaD8908025619797221281D439071"
+            SupportedNetworks.CELO_ALFAJORES: "0x32E08557B14FaD8908025619797221281D439071",
         }
 
         # Wrapped native addresses
@@ -94,7 +97,7 @@ class Helper:
             SupportedNetworks.WEMIX_TESTNET: "0xbE3686643c05f00eC46e73da594c78098F7a9Ae7",
             SupportedNetworks.KROMA_SEPOLIA: "0x4200000000000000000000000000000000000001",
             SupportedNetworks.GNOSIS_CHIADO: "0x18c8a7ec7897177E4529065a7E7B0878358B3BfF",
-            SupportedNetworks.CELO_ALFAJORES: "0x99604d0e2EfE7ABFb58BdE565b5330Bb46Ab3Dca"
+            SupportedNetworks.CELO_ALFAJORES: "0x99604d0e2EfE7ABFb58BdE565b5330Bb46Ab3Dca",
         }
 
         # CCIP-BnM addresses
@@ -102,18 +105,19 @@ class Helper:
             SupportedNetworks.ETHEREUM_SEPOLIA: "0xFd57b4ddBf88a4e07fF4e34C487b99af2Fe82a05",
             SupportedNetworks.AVALANCHE_FUJI: "0xD21341536c5cF5EB1bcb58f6723cE26e8D8E90e4",
             SupportedNetworks.ARBITRUM_SEPOLIA: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
-            SupportedNetworks.POLYGON_AMOY: "0xcab0EF91Bee323d1A617c0a027eE753aFdDb8313",
+            SupportedNetworks.POLYGON_AMOY: "0xcab0EF91Bee323d1A617c0a027eE753aFd6997E4",
             SupportedNetworks.BNB_CHAIN_TESTNET: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
-            SupportedNetworks.OPTIMISM_SEPOLIA: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
-            SupportedNetworks.BASE_SEPOLIA: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
+            SupportedNetworks.OPTIMISM_SEPOLIA: "0x8aF4204e30565DF93352fE8E1De78925F6664dA7",
+            SupportedNetworks.BASE_SEPOLIA: "0x88A2d74F47a237a62e7A51cdDa67270CE381555e",
             SupportedNetworks.WEMIX_TESTNET: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
             SupportedNetworks.KROMA_SEPOLIA: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
             SupportedNetworks.GNOSIS_CHIADO: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
-            SupportedNetworks.CELO_ALFAJORES: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D"
+            SupportedNetworks.CELO_ALFAJORES: "0xA8C0c11bf64AF62CDCA6f93D3769B88BdD7cb93D",
         }
-    
-    def capitalise_words(self, s: str) -> str:
-        return ' '.join(word.capitalize() for word in s.strip().split())
+
+    @classmethod
+    def capitalise_words(cls, s: str) -> str:
+        return " ".join(word.capitalize() for word in s.strip().split())
 
     def get_supported_networks(self) -> list:
         return list(self.networks.keys())
@@ -124,12 +128,13 @@ class Helper:
             "router_address": self.routers.get(network),
             "link_address": self.links.get(network),
             "wrapped_native_address": self.wrapped_natives.get(network),
-            "ccip_bnm_address": self.ccip_bnm.get(network)
+            "ccip_bnm_address": self.ccip_bnm.get(network),
         }
+
     def get_ccip_bnm_address(self, network: str):
         network: str = self.capitalise_words(network)
         # print(f"{self.supportedNetworksMapping.get(network)=}")
         return self.ccip_bnm.get(self.supportedNetworksMapping.get(network))
 
-def main():
-    ...
+
+def main(): ...

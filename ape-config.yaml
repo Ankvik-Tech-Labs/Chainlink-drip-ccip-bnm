@@ -2,14 +2,13 @@ name: drip_ccip_bnm
 plugins:
   - name: solidity
   - name: alchemy
+  - name: infura # why both because of rate limit
   - name: foundry
   - name: polygon
   - name: optimism
   - name: arbitrum
   - name: avalanche
   - name: base
-  - name: blast
-  - name: bsc
 default_ecosystem: ethereum
 ethereum:
   default_network: mainnet-fork

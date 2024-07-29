@@ -58,8 +58,8 @@ target-version = "py39"
 line-length = 120
 indent-width = 4
 include = [
-  "src/**/*.py",
-  "src/**/*.pyi",
+  "**/*.py",
+  "**/*.pyi",
   "tests/**/*.py",
   "tests/**/*.pyi"
 ]
@@ -165,13 +165,13 @@ lint = [
   "echo \"VERSION: `ruff --version`\"",
   "ruff format .",
   "ruff check . --fix",
-  "mypy src/drip_ccip_bnm/",
+  "mypy drip_ccip_bnm/",
 ]
 lint-check = [
   "echo \"VERSION: `ruff --version`\"",
   "ruff format --check .",
   "ruff check .",
-  "mypy src/drip_ccip_bnm/",
+  "mypy drip_ccip_bnm/",
 ]
 
 # Docs env dendencies
